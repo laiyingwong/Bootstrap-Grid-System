@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Basics</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <!-- The Grid System: line #23 -->
+  <!-- Responsive Grid: line #68 -->
+  <!-- Responsive Images: line #150 -->
+  <!-- Alignments: line #198 -->
+
+  <body>
+    <div class="container">
+      <!-- ########## The Grid System ########## -->
+      <h1 class="display-4 text-center text-primary">The Grid System</h1>
+      <!-- ********** ROWS ********** -->
+      <div class="row border">
+        <div class="col-12 bg-light">
+          Every <code>row</code> in Bootstrap has 12 units to divvy up:
+        </div>
+        <!-------- col-6 & col-6 ------->
+        <div class="col-6 bg-success">
+          I am 6 units that take up 50% of the row
+        </div>
+        <div class="col-6 bg-info">
+          I am 6 units that take up 50% of the row
+        </div>
+        <!-------- col-4 & col-8 ------->
+        <div class="col-4 bg-primary">4 units</div>
+        <div class="col-8 bg-secondary">8 units</div>
+        <!-------- col-4 & col-4 & col-4 ------->
+        <div class="col-3 bg-warning">3 units</div>
+        <div class="col-3 bg-danger">3 units</div>
+        <div class="col-3 bg-warning">3 units</div>
+        <div class="col-3 bg-danger">3 units</div>
+      </div>
+      <br />
+      <hr />
+      <!-- ********** COLUMNS ********** -->
+      <!-- if we want equally sized columns, columns will split the space automatically based on the number of col classes -->
+      <p>
+        Columns will split the space automatically based on the number of
+        <code>col</code> classes:
+      </p>
+      <!-------- 3 auto-sized ------->
+      <div class="row">
+        <div class="col bg-warning">1/3</div>
+        <div class="col bg-info">2/3</div>
+        <div class="col bg-success">3/3</div>
+      </div>
+
+      <!-------- 1 predefined & 2 auto-sized ------->
+      <div class="row">
+        <div class="col bg-danger">I'm auto sized</div>
+        <div class="col-6 bg-secondary">6 units</div>
+        <div class="col bg-danger">I'm auto sized</div>
+      </div>
+      <br />
+      <hr />
+      <!-- ########## Responsive Grid ########## -->
+      <h1 class="display-4 text-center text-primary">Responsive Grid</h1>
+      <!-------- 2 col-sm-6 ------->
+      <code>col-sm</code>
+      <div class="row">
+        <div class="col-sm-6 bg-info">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas,
+          distinctio rem?
+        </div>
+        <div class="col-sm-6 bg-warning">
+          Both columns have a class of
+          <code><strong>col-sm-6</strong></code
+          >, so they start out stacked and become horizontal at the
+          <strong>small</strong> breakpoint.
+        </div>
+      </div>
+      <br />
+      <!-------- 2 col-md-6 ------->
+      <code>col-md</code>
+      <div class="row">
+        <div class="col-md-6 bg-info">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas,
+          distinctio rem?
+        </div>
+        <div class="col-md-6 bg-warning">
+          Both columns have a class of
+          <code><strong>col-md-6</strong></code
+          >, so they start out stacked and become horizontal at the
+          <strong>medium</strong> breakpoint.
+        </div>
+      </div>
+      <br />
+      <!-------- 2 col-lg-6 ------->
+      <code>col-lg</code>
+      <div class="row">
+        <div class="col-lg-6 bg-info">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas,
+          distinctio rem?
+        </div>
+        <div class="col-lg-6 bg-warning">
+          Both columns have a class of
+          <code><strong>col-lg-6</strong></code
+          >, so they start out stacked and become horizontal at the
+          <strong>large</strong> breakpoint.
+        </div>
+      </div>
+      <hr />
+      <!-------- 4 col-md-6 & col-xl-3 ------->
+      <div class="row">
+        <div class="col-md-6 col-xl-3 bg-info">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis iusto,
+          libero quod vel fuga aliquid obcaecati quam quasi perspiciatis autem,
+          neque, facilis atque sit adipisci unde distinctio eligendi nobis
+          ipsam?
+        </div>
+        <div class="col-md-6 col-xl-3 bg-warning">
+          <code><strong>col-md-6</strong></code
+          >: All 4 columns start out stacked. They become horizontal and each
+          takes up <strong>50% </strong>of the row at the
+          <strong>medium</strong> breakpoint.
+          <br />
+          <code><strong>col-xl-3</strong></code
+          >: Each column will take up <strong>25%</strong> of the row at the
+          <strong>extra-large</strong> breakpoint.
+        </div>
+        <div class="col-md-6 col-xl-3 bg-danger">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis iusto,
+          libero quod vel fuga aliquid obcaecati quam quasi perspiciatis autem,
+          neque, facilis atque sit adipisci unde distinctio eligendi nobis
+          ipsam?
+        </div>
+        <div class="col-md-6 col-xl-3 bg-success">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis iusto,
+          libero quod vel fuga aliquid obcaecati quam quasi perspiciatis autem,
+          neque, facilis atque sit adipisci unde distinctio eligendi nobis
+          ipsam?
+        </div>
+      </div>
+
+      <br />
+      <hr />
+      <!-- ########## Responsive Images ########## -->
+      <h1 class="display-4 text-center text-primary">Responsive Images</h1>
+      <p>
+        Images in Bootstrap are made responsive with <code>.img-fluid</code>.
+        This applies <code>max-width: 100%</code>; and
+        <code>height: auto</code>; to the image so that it scales with the
+        parent width.
+      </p>
+      <p>
+        The three images below start out stacked. The first two become
+        horizontal and each takes up <strong>50% </strong> of the row at the
+        <strong>medium</strong> breakpoint with <code>col-md-6</code>.
+      </p>
+      <p>
+        When the viewport hits the
+        <strong>large</strong> breakpoint with <code>col-lg-4</code>, all three
+        images will take up the row, and each occupies <strong>1/3 </strong> of
+        the space.
+      </p>
+      <p>
+        We can eliminate the space between images by adding
+        <code>no-gutters</code> to the <code>row</code> class.
+      </p>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <img
+            class="img-fluid"
+            src="https://images.unsplash.com/photo-1615280825886-fa817c0a06cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            alt="https://unsplash.com/photos/yRXuXvy4sQ4"
+          />
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img
+            class="img-fluid"
+            src="https://images.unsplash.com/photo-1645273994732-6e30dc358478?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1040&q=80"
+            alt="https://unsplash.com/photos/bLmarqwKBns"
+          />
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img
+            class="img-fluid"
+            src="https://images.unsplash.com/photo-1517002152503-aeda5fe2cd36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80"
+            alt="https://unsplash.com/photos/3eLY9nwyqqE"
+          />
+        </div>
+      </div>
+      <br />
+      <hr />
+      <!-- ########## Alignments ########## -->
+      <h1 class="display-4 text-center text-primary">Alignments</h1>
+      <p>
+        Bootstrap alignment uses Flexbox terminology because it's built on top
+        of Flexbox.
+      </p>
+      <br />
+      <!-------- align-items-start ------->
+      <p><code>align-items-start</code></p>
+      <div class="row align-items-start">
+        <div class="col bg-danger">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo.
+        </div>
+        <div class="col bg-warning">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit autem
+          excepturi asperiores quaerat, consectetur facilis quo qui, harum eaque
+          id porro possimus explicabo officiis.
+        </div>
+        <div class="col bg-success">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste dicta
+          itaque quidem tenetur eos esse eligendi deleniti qui consequuntur
+          ullam. Beatae magnam voluptatum repellat consequatur provident
+          dolorem, asperiores labore minus!
+        </div>
+        <div class="col bg-primary">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ea
+          reprehenderit aut dolore impedit maiores aliquid eos, necessitatibus!
+        </div>
+      </div>
+      <br />
+      <hr />
+      <!-------- align-items-center ------->
+      <p><code>align-items-center</code></p>
+      <div class="row align-items-center">
+        <div class="col bg-danger">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo.
+        </div>
+        <div class="col bg-warning">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit autem
+          excepturi asperiores quaerat, consectetur facilis quo qui, harum eaque
+          id porro possimus explicabo officiis.
+        </div>
+        <div class="col bg-success">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste dicta
+          itaque quidem tenetur eos esse eligendi deleniti qui consequuntur
+          ullam. Beatae magnam voluptatum repellat consequatur provident
+          dolorem, asperiores labore minus!
+        </div>
+        <div class="col bg-primary">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ea
+          reprehenderit aut dolore impedit maiores aliquid eos, necessitatibus!
+        </div>
+      </div>
+      <br />
+      <hr />
+
+      <!-------- align-items-end ------->
+      <p><code>align-items-end</code></p>
+      <div class="row align-items-end">
+        <div class="col bg-danger">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo.
+        </div>
+        <div class="col bg-warning">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit autem
+          excepturi asperiores quaerat, consectetur facilis quo qui, harum eaque
+          id porro possimus explicabo officiis.
+        </div>
+        <div class="col bg-success">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste dicta
+          itaque quidem tenetur eos esse eligendi deleniti qui consequuntur
+          ullam. Beatae magnam voluptatum repellat consequatur provident
+          dolorem, asperiores labore minus!
+        </div>
+        <div class="col bg-primary">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ea
+          reprehenderit aut dolore impedit maiores aliquid eos, necessitatibus!
+        </div>
+      </div>
+      <br />
+      <hr />
+
+      <!-------- align-items-end ------->
+      <p><code>align-self</code></p>
+      <div class="container">
+        <div class="row">
+          <div class="col align-self-start bg-danger">
+            <p class="text-white text-center">align-self-start</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit?
+          </div>
+          <div class="col align-self-center bg-warning">
+            <p class="text-white text-center">align-self-center</code></p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+          <div class="col align-self-end bg-success">
+            <p class="text-white text-center">align-self-end</p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit!
+          </div>
+          <div class="col bg-primary">
+            <p class="text-white text-center">reference</p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit! Reprehenderit accusantium quo quibusdam eum ab ullam. Non a, natus beatae, quibusdam repudiandae!
+          </div>
+        </div>
+
+        <br />
+        <hr />
+
+        <!-------- justify-content-start ------->
+        <p><code>justify-content-start</code></p>
+        <div class="row border justify-content-start">
+          <div class="col-4 bg-warning">
+            One of two columns
+          </div>
+          <div class="col-4 bg-info">
+            One of two columns
+          </div>
+        </div>
+        <br />
+
+
+      <!-------- justify-content-center ------->
+      <p><code>justify-content-center</code></p>
+      <div class="row border justify-content-center">
+        <div class="col-4 bg-warning">
+          One of two columns
+        </div>
+        <div class="col-4 bg-info">
+          One of two columns
+        </div>
+      </div>
+
+      <br />
+
+      <!-------- justify-content-center ------->
+      <p><code>justify-content-center</code></p>
+      <div class="row border justify-content-end">
+        <div class="col-4 bg-warning">
+          One of two columns
+        </div>
+        <div class="col-4 bg-info">
+          One of two columns
+        </div>
+      </div>
+
+      <br />
+
+      <!-------- justify-content-around------->
+      <p><code>justify-content-around</code></p>
+      <div class="row border justify-content-around">
+        <div class="col-4 bg-warning">
+          One of two columns
+        </div>
+        <div class="col-4 bg-info">
+          One of two columns
+        </div>
+      </div>
+
+      <br />
+
+      <!-------- justify-content-between ------->
+      <p><code>justify-content-between</code></p>
+      <div class="row border justify-content-between">
+        <div class="col-4 bg-warning">
+          One of two columns
+        </div>
+        <div class="col-4 bg-info">
+          One of two columns
+        </div>
+      </div>
+
+    </div>
+<br><br><br>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
